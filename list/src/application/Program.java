@@ -20,9 +20,9 @@ public class Program {
 		list.add(0, "JAIR");
 
 		int i = 0;
-		// percorre a lista e imprime os elementos
+		// percorre a lista e imprime os elementos na posicao X
 		for (String x : list) {
-			System.out.println((i++) + "-->" + x);
+			System.out.println((i++) + " ->" + x);
 		}
 	}
 
