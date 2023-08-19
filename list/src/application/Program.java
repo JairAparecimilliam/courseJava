@@ -41,6 +41,17 @@ public class Program {
 		for (String x : list) {
 			System.out.println((i++) + " ->" + x);
 		}
-	}
 
+		
+		System.out.println("--------------------------");
+		// remove all predicate x where charAt 0 =="M"
+		list.removeIf(x -> x.charAt(0) == 'M');
+
+		i = 0;
+		// percorre a lista e imprime os elementos na posicao X
+		for (String x : list) {
+			System.out.println((i++) + " ->" + x);
+		}
+
+	}
 }
