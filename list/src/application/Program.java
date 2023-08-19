@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Program {
 
@@ -11,6 +12,7 @@ public class Program {
 
 		// adiciona nomes na lista
 		list.add("Alex");
+		list.add("Amanda");
 		list.add("Bob");
 		list.add("Gertude");
 		list.add("Manoel");
@@ -42,7 +44,6 @@ public class Program {
 			System.out.println((i++) + " ->" + x);
 		}
 
-		
 		System.out.println("--------------------------");
 		// remove all predicate x where charAt 0 =="M"
 		list.removeIf(x -> x.charAt(0) == 'M');
@@ -53,7 +54,15 @@ public class Program {
 			System.out.println((i++) + " ->" + x);
 		}
 		System.out.println("--------------------------");
-		
-		System.out.println("Index of Elias: "+ list.indexOf("Elias"));
+
+		System.out.println("Index of Elias: " + list.indexOf("Elias"));
+
+		System.out.println("--------------------------");
+		List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+
+		// percorre a lista e imprime chracter predicate filter
+		for (String x : result) {
+			System.out.println(x);
+		}
 	}
 }
