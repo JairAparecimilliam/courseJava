@@ -52,6 +52,8 @@ public class Program {
 		for (String x : list) {
 			System.out.println((i++) + " ->" + x);
 		}
-
+		System.out.println("--------------------------");
+		
+		System.out.println("Index of Elias: "+ list.indexOf("Elias"));
 	}
 }
