@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kali
+ *
+ */
+module forEach {
+}
