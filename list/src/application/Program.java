@@ -9,7 +9,7 @@ public class Program {
 
 		List<String> list = new ArrayList<>();
 
-		//adiciona nomes na lista
+		// adiciona nomes na lista
 		list.add("Alex");
 		list.add("Bob");
 		list.add("Gertude");
@@ -17,10 +17,12 @@ public class Program {
 		list.add("Pele");
 		list.add("Jose");
 		list.add("Elias");
+		list.add(0, "JAIR");
 
-		//percorre a lista e imprime os elementos 
+		int i = 0;
+		// percorre a lista e imprime os elementos
 		for (String x : list) {
-			System.out.println(x);
+			System.out.println((i++) + "-->" + x);
 		}
 	}
 
