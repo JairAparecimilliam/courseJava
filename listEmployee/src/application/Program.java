@@ -36,14 +36,30 @@ public class Program {
 		}
 
 		System.out.println("Enter the ID of the employee who will receive a salary increase");
+		int idSalary = sc.nextInt();
+		// variavel auxiliar para receber funcao para encontrar a posicao do ID
+		Integer pos = idPosition(list, idSalary);
+		if (pos == null) {
+			System.out.println("This Id does not exist");
+		} else {
+			System.out.print("Enter the percentage: ");
+			double percent = sc.nextDouble();
+			list.get(pos).increaseSalary(percent);
+		}
 
+		System.out.println();
+		System.out.println("List of Employees: ");
+		// pra cada employee emp na list
+		for (Employee emp : list) {
+			System.out.println(emp);
+		}
 		sc.close();
 	}
 
 	// Criar funcao auxiliar para procurar um elemento na lista
 	// metodo hasId recebe uma lista de funcionarios e vai receber um Id
 	// funcao do metodo->encontrar a posicaod esse ID nessa lista
-	public Integer idPosition(List<Employee> list, int id) {
+	public static Integer idPosition(List<Employee> list, int id) {
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getId() == id) {
 				return i;
