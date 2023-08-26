@@ -27,15 +27,28 @@ public class Program {
 			String name = sc.nextLine();
 			System.out.print("Salary: ");
 			Double salary = sc.nextDouble();
-			
-			//instancia um novo objeto com atributos do funcionario
+
+			// instancia um novo objeto com atributos do funcionario
 			Employee emp = new Employee(id, name, salary);
-			
-			//adiciona na lista o objeto emp acima
+
+			// adiciona na lista o objeto emp acima
 			list.add(emp);
 		}
+
+		System.out.println("Enter the ID of the employee who will receive a salary increase");
 
 		sc.close();
 	}
 
+	// Criar funcao auxiliar para procurar um elemento na lista
+	// metodo hasId recebe uma lista de funcionarios e vai receber um Id
+	// funcao do metodo->encontrar a posicaod esse ID nessa lista
+	public Integer idPosition(List<Employee> list, int id) {
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId() == id) {
+				return i;
+			}
+		}
+		return null;
+	}
 }
