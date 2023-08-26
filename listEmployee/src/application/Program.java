@@ -28,6 +28,11 @@ public class Program {
 			System.out.print("Salary: ");
 			Double salary = sc.nextDouble();
 			
+			//instancia um novo objeto com atributos do funcionario
+			Employee emp = new Employee(id, name, salary);
+			
+			//adiciona na lista o objeto emp acima
+			list.add(emp);
 		}
 
 		sc.close();
